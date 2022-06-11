@@ -1,9 +1,52 @@
 apiVersion: v1
 entries:
+  kong:
+  - annotations:
+      category: Infrastructure
+    apiVersion: v2
+    appVersion: 2.8.1
+    created: "2022-06-11T11:17:39.897683+09:00"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      version: 1.x.x
+    - condition: cassandra.enabled
+      name: cassandra
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.x.x
+    description: Kong is an open source Microservice API gateway and platform designed
+      for managing microservices requests of high-availability, fault-tolerance, and
+      distributed systems.
+    digest: c1d3f483222cbc40a0227273944fbbacddca0538aa825a769e67f9f968030040
+    home: https://github.com/bitnami/charts/tree/master/bitnami/kong
+    icon: https://bitnami.com/assets/stacks/kong/img/kong-stack-220x234.png
+    keywords:
+    - kong
+    - ingress
+    - openresty
+    - controller
+    - http
+    - web
+    - www
+    - reverse proxy
+    maintainers:
+    - name: Bitnami
+      url: https://github.com/bitnami/charts
+    name: kong
+    sources:
+    - https://github.com/bitnami/bitnami-docker-kong
+    - https://konghq.com/
+    urls:
+    - kong-6.3.7.tgz
+    version: 6.3.7
   nginxstd:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-06-11T11:06:47.218666+09:00"
+    created: "2022-06-11T11:17:39.898106+09:00"
     description: Standard Nignx Helm for Acorn Company
     digest: cfc505ac480cc72b352b10bc44f5db9f0138f80bfef8f7da6adf23b47ea5321a
     name: nginxstd
@@ -11,4 +54,4 @@ entries:
     urls:
     - nginxstd-0.1.0.tgz
     version: 0.1.0
-generated: "2022-06-11T11:06:47.218138+09:00"
+generated: "2022-06-11T11:17:39.885905+09:00"
